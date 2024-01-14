@@ -15,4 +15,3 @@ function reverse_string_via_built_in_functions(buf) {
 }
 
 exports.reverse_string_via_built_in_functions = reverse_string_via_built_in_functions
-   

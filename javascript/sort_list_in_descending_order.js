@@ -8,13 +8,13 @@ function sort_list_in_descending_order(num_list) {
     while (true) {
         let instances_of_out_of_order = 0
         for (let i = 0; i < num_list.length; i++) {
-            if (num_list[i] < num_list[i+1]) {
+            if (num_list[i] < num_list[i + 1]) {
                 let small = num_list[i]
-                let large = num_list[i+1]
-    
+                let large = num_list[i + 1]
+
                 num_list[i] = large
-                num_list[i+1] = small
-    
+                num_list[i + 1] = small
+
                 instances_of_out_of_order += 1
             }
         }
@@ -22,9 +22,8 @@ function sort_list_in_descending_order(num_list) {
             break
         }
     }
-        
+
     return num_list
 }
 
 exports.sort_list_in_descending_order = sort_list_in_descending_order
-   
