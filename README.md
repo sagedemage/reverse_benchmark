@@ -1,5 +1,9 @@
 # reverse_benchmark
 
+Benchmarks the programming languages on some simple algorithms.
+I called it reverse benchmark since most of these algorithms reverses the order of the strings
+and sorts the lists in descending order (reverse order).
+
 ## Results
 
 ### Python
