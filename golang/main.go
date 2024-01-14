@@ -61,44 +61,44 @@ func main() {
 
 	// Case 1: Reverse string via loop
 
-	start := time.Now()
+	start := time.Now().UnixNano()
 
 	rev_buf := reverse_string_via_loop(string_of_letters)
 
-	t := time.Now()
+	end := time.Now().UnixNano()
 
-	exe_time := t.Sub(start)
+	exe_time := end - start
 
 	fmt.Println("Case 1: Reverse string via loop")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time))
+	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "ns")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 2: Reverse string via stack
 
-	start = time.Now()
+	start = time.Now().UnixNano()
 
 	rev_buf = reverse_string_via_stack(string_of_letters)
 
-	t = time.Now()
+	end = time.Now().UnixNano()
 
-	exe_time = t.Sub(start)
+	exe_time = end - start
 
 	fmt.Println("Case 2: Reverse string via stack")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time))
+	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "ns")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 3: Reverse string via recursion
 
-	start = time.Now()
+	start = time.Now().UnixNano()
 
 	rev_buf = reverse_string_via_recursion(string_of_letters)
 
-	t = time.Now()
+	end = time.Now().UnixNano()
 
-	exe_time = t.Sub(start)
+	exe_time = end - start
 
 	fmt.Println("Case 3: Reverse string via recursion")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time))
+	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "ns")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	/* Sort Number List in Descending Order (Reverse Order) */
@@ -113,16 +113,16 @@ func main() {
 		41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
 	}
 
-	start = time.Now()
+	start = time.Now().UnixNano()
 
 	var rev_list_of_nums []int = sort_list_in_descending_order(list_of_nums)
 
-	t = time.Now()
+	end = time.Now().UnixNano()
 
-	exe_time = t.Sub(start)
+	exe_time = end - start
 
 	fmt.Println("Case 4: Sort number list in descending order via loop")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time))
+	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "ns")
 	fmt.Println("Output: ")
 	fmt.Println(rev_list_of_nums)
 	fmt.Println()
@@ -131,15 +131,15 @@ func main() {
 
 	// Case 5: Reverse string via loop with rune
 
-	start = time.Now()
+	start = time.Now().UnixNano()
 
 	rev_buf = reverse_string_via_rune(string_of_letters)
 
-	t = time.Now()
+	end = time.Now().UnixNano()
 
-	exe_time = t.Sub(start)
+	exe_time = end - start
 
 	fmt.Println("Case 5: Reverse string via loop with rune")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time))
+	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "ns")
 	fmt.Println("Output: " + rev_buf + "\n")
 }
