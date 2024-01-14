@@ -54,38 +54,38 @@ string_of_letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefg
 
 # Case 1: Reverse string via loop
 
-start_t = time.time()
+start_t = time.time_ns()
 
 rev_buf = reverse_string_via_loop(string_of_letters)
 
-exe_time = round((time.time() - start_t) * 10 ** 6, 3)
+exe_time = time.time_ns() - start_t
 
 print("Case 1: Reverse string via loop")
-print("Execution time: " + str(exe_time) + "µs")
+print("Execution time: " + str(exe_time) + "ns")
 print("Output: " + rev_buf + "\n")
 
 # Case 2: Reverse string via stack
 
-start_t = time.time()
+start_t = time.time_ns()
 
 rev_buf = reverse_string_via_stack(string_of_letters)
 
-exe_time = round((time.time() - start_t) * 10 ** 6, 3)
+exe_time = time.time_ns() - start_t
 
 print("Case 2: Reverse string via stack")
-print("Execution time: " + str(exe_time) + "µs")
+print("Execution time: " + str(exe_time) + "ns")
 print("Output: " + rev_buf + "\n")
 
 # Case 3: Reverse string via recursion
 
-start_t = time.time()
+start_t = time.time_ns()
 
 rev_buf = reverse_string_via_recursion(string_of_letters)
 
-exe_time = round((time.time() - start_t) * 10 ** 6, 3)
+exe_time = time.time_ns() - start_t
 
 print("Case 3: Reverse string via recursion")
-print("Execution time: " + str(exe_time) + "µs")
+print("Execution time: " + str(exe_time) + "ns")
 print("Output: " + rev_buf + "\n")
 
 """Sort Number List in Descending Order (Reverse Order)"""
@@ -100,14 +100,14 @@ list_of_nums = [
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
 ]
 
-start_t = time.time()
+start_t = time.time_ns()
 
 rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
 
-exe_time = round((time.time() - start_t) * 10 ** 6, 3)
+exe_time = time.time_ns() - start_t
 
 print("Case 4: Sort number in descending order via loop")
-print("Execution time: " + str(exe_time) + "µs")
+print("Execution time: " + str(exe_time) + "ns")
 print("Output: ")
 print(rev_list_of_nums)
 print("")
@@ -116,12 +116,12 @@ print("")
 
 # Case 5: Reverse string via extended slice
 
-start_t = time.time()
+start_t = time.time_ns()
 
 rev_buf = reverse_string_via_extended_slice(string_of_letters)
 
-exe_time = round((time.time() - start_t) * 10 ** 6, 3)
+exe_time = time.time_ns() - start_t
 
 print("Case 5: Reverse string via extended slice")
-print("Execution time: " + str(exe_time) + "µs")
+print("Execution time: " + str(exe_time) + "ns")
 print("Output: " + rev_buf + "\n")
