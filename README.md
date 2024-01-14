@@ -8,21 +8,20 @@ and sorts the lists in descending order (reverse order).
 
 ### Python
 
-Case 1: Reverse string via loop \
-Execution time: 8.821µs
+Case 1: Reverse string via loop
+Execution time: 13909ns
 
-Case 2: Reverse string via stack \
-Execution time: 22.888µs
+Case 2: Reverse string via stack
+Execution time: 17229ns
 
-Case 3: Reverse string via recursion \
-Execution time: 61.512µs
+Case 3: Reverse string via recursion
+Execution time: 51521ns
 
-Case 4: Sort number in descending order via loop \
-Execution time: 273.466µs
+Case 4: Sort number in descending order via loop
+Execution time: 290797ns
 
-Case 5: Reverse string via extended slice \
-Execution time: 0.954µs
-
+Case 5: Reverse string via extended slice
+Execution time: 1662ns
 
 ### Golang
 
