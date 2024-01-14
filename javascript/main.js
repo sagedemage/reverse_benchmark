@@ -3,7 +3,6 @@ const { reverse_string_via_built_in_functions } = require("./reverse_string_via_
 
 /* Reverse a string */
 
-
 function reverse_string_via_loop(buf) {
     /*
     Time complexity: O(n)
