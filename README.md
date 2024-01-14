@@ -41,7 +41,7 @@ Execution time: 3.343µs
 Case 5: Reverse string via loop with rune \
 Execution time: 1.169µs
 
-## JavaScript
+### JavaScript
 
 Case 1: Reverse string via loop \
 Execution time: 38.08μs
