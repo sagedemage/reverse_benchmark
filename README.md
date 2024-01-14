@@ -44,17 +44,17 @@ Execution time: 1.169µs
 ### JavaScript
 
 Case 1: Reverse string via loop \
-Execution time: 38.08μs
+Execution time: 31650ns
 
 Case 2: Reverse string via stack \
-Execution time: 56.43μs
+Execution time: 56149ns
 
 Case 3: Reverse string via recursion \
-Execution time: 81.285μs
+Execution time: 71800ns
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 265.168μs
+Execution time: 239263ns
 
 Case 5: Reverse string via built-in functions \
-Execution time: 50.112μs
+Execution time: 38690ns
 
