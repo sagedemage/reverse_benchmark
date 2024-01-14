@@ -41,3 +41,20 @@ Execution time: 3.343µs
 Case 5: Reverse string via loop with rune \
 Execution time: 1.169µs
 
+## JavaScript
+
+Case 1: Reverse string via loop \
+Execution time: 38.08μs
+
+Case 2: Reverse string via stack \
+Execution time: 56.43μs
+
+Case 3: Reverse string via recursion \
+Execution time: 81.285μs
+
+Case 4: Sort number list in descending order via loop \
+Execution time: 265.168μs
+
+Case 5: Reverse string via built-in functions \
+Execution time: 50.112μs
+

@@ -125,5 +125,3 @@ exe_time = round((time.time() - start_t) * 10 ** 6, 3)
 print("Case 5: Reverse string via extended slice")
 print("Execution time: " + str(exe_time) + "µs")
 print("Output: " + rev_buf + "\n")
-
-"""Sort Number List in Descending Order (Reverse Order)"""
