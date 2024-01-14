@@ -27,19 +27,19 @@ Execution time: 0.954µs
 ### Golang
 
 Case 1: Reverse string via loop \
-Execution time: 4.705µs
+Execution time: 5038ns
 
 Case 2: Reverse string via stack \
-Execution time: 5.276µs
+Execution time: 5634ns
 
 Case 3: Reverse string via recursion \
-Execution time: 26.613µs
+Execution time: 37886ns
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 3.343µs
+Execution time: 3276ns
 
 Case 5: Reverse string via loop with rune \
-Execution time: 1.169µs
+Execution time: 1212ns
 
 ### JavaScript
 
