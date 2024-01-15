@@ -54,44 +54,66 @@ string_of_letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefg
 
 # Case 1: Reverse string via loop
 
-start_t = datetime.datetime.now()
+exe_time_total = 0
+rev_buf = ""
 
-rev_buf = reverse_string_via_loop(string_of_letters)
+for i in range(100):
+    start_t = datetime.datetime.now()
 
-end_t = datetime.datetime.now()
+    rev_buf = reverse_string_via_loop(string_of_letters)
 
-exe_time = end_t - start_t
+    end_t = datetime.datetime.now()
+
+    exe_time = end_t - start_t
+
+    exe_time_total += exe_time.microseconds
+
+average_exe_time = int(exe_time_total / 100)
 
 print("Case 1: Reverse string via loop")
-print("Execution time: " + str(exe_time.microseconds) + "us")
+print("Average execution time: " + str(average_exe_time) + "us")
 print("Output: " + rev_buf + "\n")
 
 # Case 2: Reverse string via stack
 
-start_t = datetime.datetime.now()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_stack(string_of_letters)
+for i in range(100):
+    start_t = datetime.datetime.now()
 
-end_t = datetime.datetime.now()
+    rev_buf = reverse_string_via_stack(string_of_letters)
 
-exe_time = end_t - start_t
+    end_t = datetime.datetime.now()
+
+    exe_time = end_t - start_t
+
+    exe_time_total += exe_time.microseconds
+
+average_exe_time = int(exe_time_total / 100)
 
 print("Case 2: Reverse string via stack")
-print("Execution time: " + str(exe_time.microseconds) + "us")
+print("Average execution time: " + str(average_exe_time) + "us")
 print("Output: " + rev_buf + "\n")
 
 # Case 3: Reverse string via recursion
 
-start_t = datetime.datetime.now()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_recursion(string_of_letters)
+for i in range(100):
+    start_t = datetime.datetime.now()
 
-end_t = datetime.datetime.now()
+    rev_buf = reverse_string_via_recursion(string_of_letters)
 
-exe_time = end_t - start_t
+    end_t = datetime.datetime.now()
+
+    exe_time = end_t - start_t
+
+    exe_time_total += exe_time.microseconds
+
+average_exe_time = int(exe_time_total / 100)
 
 print("Case 3: Reverse string via recursion")
-print("Execution time: " + str(exe_time.microseconds) + "us")
+print("Average execution time: " + str(average_exe_time) + "us")
 print("Output: " + rev_buf + "\n")
 
 """Sort Number List in Descending Order (Reverse Order)"""
@@ -106,16 +128,25 @@ list_of_nums = [
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
 ]
 
-start_t = datetime.datetime.now()
+rev_list_of_nums = []
 
-rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+exe_time_total = 0
 
-end_t = datetime.datetime.now()
+for i in range(100):
+    start_t = datetime.datetime.now()
 
-exe_time = end_t - start_t
+    rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+
+    end_t = datetime.datetime.now()
+
+    exe_time = end_t - start_t
+
+    exe_time_total += exe_time.microseconds
+
+average_exe_time = int(exe_time_total / 100)
 
 print("Case 4: Sort number in descending order via loop")
-print("Execution time: " + str(exe_time.microseconds) + "us")
+print("Average execution time: " + str(average_exe_time) + "us")
 print("Output: ")
 print(rev_list_of_nums)
 print("")
@@ -124,14 +155,21 @@ print("")
 
 # Case 5: Reverse string via extended slice
 
-start_t = datetime.datetime.now()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_extended_slice(string_of_letters)
+for i in range(100):
+    start_t = datetime.datetime.now()
 
-end_t = datetime.datetime.now()
+    rev_buf = reverse_string_via_extended_slice(string_of_letters)
 
-exe_time = end_t - start_t
+    end_t = datetime.datetime.now()
+
+    exe_time = end_t - start_t
+
+    exe_time_total += exe_time.microseconds
+
+average_exe_time = int(exe_time_total / 100)
 
 print("Case 5: Reverse string via extended slice")
-print("Execution time: " + str(exe_time.microseconds) + "us")
+print("Average execution time: " + str(average_exe_time) + "us")
 print("Output: " + rev_buf + "\n")
