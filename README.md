@@ -7,11 +7,6 @@ and sorts the lists in descending order (reverse order).
 ## Results
 
 ### Table
-<style>
-    .nanoseconds_result {
-        text-align: right;
-    }
-</style>
 <table>
     <tr>
         <th>Languages</th>
@@ -22,31 +17,31 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Python</td>
-        <td class="nanoseconds_result">13909ns</td>
-        <td class="nanoseconds_result">17229ns</td>
-        <td class="nanoseconds_result">51521ns</td>
-        <td class="nanoseconds_result">290797ns</td>
+        <td style="text-align: right;">13909ns</td>
+        <td style="text-align: right;">17229ns</td>
+        <td style="text-align: right;">51521ns</td>
+        <td style="text-align: right;">290797ns</td>
     </tr>
     <tr>
         <td>Golang</td>
-        <td class="nanoseconds_result">5038ns</td>
-        <td class="nanoseconds_result">5634ns</td>
-        <td class="nanoseconds_result">37886ns</td>
-        <td class="nanoseconds_result">3276ns</td>
+        <td style="text-align: right;">5038ns</td>
+        <td style="text-align: right;">5634ns</td>
+        <td style="text-align: right;">37886ns</td>
+        <td style="text-align: right;">3276ns</td>
     </tr>
     <tr>
         <td>JavaScript</td>
-        <td class="nanoseconds_result">31650ns</td>
-        <td class="nanoseconds_result">56149ns</td>
-        <td class="nanoseconds_result">71800ns</td>
-        <td class="nanoseconds_result">239263ns</td>
+        <td style="text-align: right;">31650ns</td>
+        <td style="text-align: right;">56149ns</td>
+        <td style="text-align: right;">71800ns</td>
+        <td style="text-align: right;">239263ns</td>
     </tr>
     <tr>
         <td>Java</td>
-        <td class="nanoseconds_result">75250ns</td>
-        <td class="nanoseconds_result">1702044ns</td>
-        <td class="nanoseconds_result">3656871ns</td>
-        <td class="nanoseconds_result">82436ns</td>
+        <td style="text-align: right;">75250ns</td>
+        <td style="text-align: right;">1702044ns</td>
+        <td style="text-align: right;">3656871ns</td>
+        <td style="text-align: right;">82436ns</td>
     </tr>
 </table>
 
