@@ -101,15 +101,15 @@ Average execution time: 3us
 
 #### Java
 
-Case 1: Reverse string via loop
+Case 1: Reverse string via loop \
 Average execution time: 18us
 
-Case 2: Reverse string via stack
+Case 2: Reverse string via stack \
 Average execution time: 44us
 
-Case 3: Reverse string via recursion
+Case 3: Reverse string via recursion \
 Average execution time: 99us
 
-Case 4: Sort number list in descending order via loop
+Case 4: Sort number list in descending order via loop \
 Average execution time: 2us
 
