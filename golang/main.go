@@ -54,8 +54,8 @@ func reverse_string_via_recursion(buf string) string {
 }
 
 func main() {
+	// 104 characters
 	string_of_letters := "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
-	//string_of_letters := "abc"
 
 	/* Reverse string */
 
