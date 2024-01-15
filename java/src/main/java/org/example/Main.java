@@ -15,10 +15,10 @@ public class Main {
         String rev_buf = reverse_string_via_loop(string_of_letters);
         long end = System.nanoTime();
 
-        long exe_time = end - start;
+        long exe_time = (end - start) / 1000;
 
         System.out.println("Case 1: Reverse string via loop");
-        System.out.println("Execution time: " + exe_time + "ns");
+        System.out.println("Execution time: " + exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 2: Reverse string via stack
@@ -27,10 +27,10 @@ public class Main {
         rev_buf = reverse_string_via_stack(string_of_letters);
         end = System.nanoTime();
 
-        exe_time = end - start;
+        exe_time = (end - start) / 1000;
 
         System.out.println("Case 2: Reverse string via stack");
-        System.out.println("Execution time: " + exe_time + "ns");
+        System.out.println("Execution time: " + exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 3: Reverse string via recursion
@@ -39,10 +39,10 @@ public class Main {
         rev_buf = reverse_string_via_recursion(string_of_letters);
         end = System.nanoTime();
 
-        exe_time = end - start;
+        exe_time = (end - start) / 1000;
 
         System.out.println("Case 3: Reverse string via recursion");
-        System.out.println("Execution time: " + exe_time + "ns");
+        System.out.println("Execution time: " + exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         /* Sort Number List in Descending Order (Reverse Order) */
@@ -61,10 +61,10 @@ public class Main {
         int[] rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
         end = System.nanoTime();
 
-        exe_time = end - start;
+        exe_time = (end - start) / 1000;
 
         System.out.println("Case 4: Sort number list in descending order via loop");
-        System.out.println("Execution time: " + exe_time + "ns");
+        System.out.println("Execution time: " + exe_time + "us");
         System.out.println("Output: ");
         System.out.println(Arrays.toString(rev_list_of_nums) + "\n");
     }
