@@ -11,38 +11,60 @@ public class Main {
 
         // Case 1: Reverse string via loop
 
-        long start = System.nanoTime();
-        String rev_buf = reverse_string_via_loop(string_of_letters);
-        long end = System.nanoTime();
+        long exe_time_total = 0;
+        String rev_buf = "";
 
-        long exe_time = (end - start) / 1000;
+        for (int i = 0; i < 100; i++) {
+            long start = System.nanoTime();
+            rev_buf = reverse_string_via_loop(string_of_letters);
+            long end = System.nanoTime();
+
+            long exe_time = end - start;
+            exe_time_total += exe_time;
+        }
+
+        long average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 1: Reverse string via loop");
-        System.out.println("Execution time: " + exe_time + "us");
+        System.out.println("Average execution time: " + average_exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 2: Reverse string via stack
 
-        start = System.nanoTime();
-        rev_buf = reverse_string_via_stack(string_of_letters);
-        end = System.nanoTime();
+        exe_time_total = 0;
 
-        exe_time = (end - start) / 1000;
+        for (int i = 0; i < 100; i++) {
+            long start = System.nanoTime();
+            rev_buf = reverse_string_via_stack(string_of_letters);
+            long end = System.nanoTime();
+
+            long exe_time = end - start;
+            exe_time_total += exe_time;
+        }
+
+        average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 2: Reverse string via stack");
-        System.out.println("Execution time: " + exe_time + "us");
+        System.out.println("Average execution time: " + average_exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 3: Reverse string via recursion
 
-        start = System.nanoTime();
-        rev_buf = reverse_string_via_recursion(string_of_letters);
-        end = System.nanoTime();
+        exe_time_total = 0;
 
-        exe_time = (end - start) / 1000;
+        for (int i = 0; i < 100; i++) {
+            long start = System.nanoTime();
+            rev_buf = reverse_string_via_recursion(string_of_letters);
+            long end = System.nanoTime();
+
+            long exe_time = end - start;
+            exe_time_total += exe_time;
+        }
+
+        average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 3: Reverse string via recursion");
-        System.out.println("Execution time: " + exe_time + "us");
+        System.out.println("Average execution time: " + average_exe_time + "us");
         System.out.println("Output: " + rev_buf + "\n");
 
         /* Sort Number List in Descending Order (Reverse Order) */
@@ -57,14 +79,22 @@ public class Main {
                 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
         };
 
-        start = System.nanoTime();
-        int[] rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
-        end = System.nanoTime();
+        int[] rev_list_of_nums = new int[50];
+        exe_time_total = 0;
 
-        exe_time = (end - start) / 1000;
+        for (int i = 0; i < 100; i++) {
+            long start = System.nanoTime();
+            rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
+            long end = System.nanoTime();
+
+            long exe_time = end - start;
+            exe_time_total += exe_time;
+        }
+
+        average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 4: Sort number list in descending order via loop");
-        System.out.println("Execution time: " + exe_time + "us");
+        System.out.println("Average execution time: " + average_exe_time + "us");
         System.out.println("Output: ");
         System.out.println(Arrays.toString(rev_list_of_nums) + "\n");
     }

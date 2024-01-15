@@ -58,44 +58,69 @@ let string_of_letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabc
 
 // Case 1: Reverse string via loop
 
-let start = process.hrtime()
+let exe_time_total = 0
+let rev_buf = ""
 
-let rev_buf = reverse_string_via_loop(string_of_letters)
+for (let i = 0; i < 100; i++) {
+    let start = process.hrtime()
 
-let end = process.hrtime()
+    rev_buf = reverse_string_via_loop(string_of_letters)
+    
+    let end = process.hrtime()
+    
+    let exe_time = end[1] - start[1]
 
-let total_time = Math.round((end[1] - start[1]) / 1000)
+    exe_time_total += exe_time
+}
+
+let average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 1: Reverse string via loop")
-console.log("Execution time: " + total_time + "us");
+console.log("Average execution time: " + average_exe_time + "us");
 console.log("Output: " + rev_buf + "\n")
 
 // Case 2: Reverse string via stack
 
-start = process.hrtime()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_stack(string_of_letters)
+for (let i = 0; i < 100; i++) {
+    let start = process.hrtime()
 
-end = process.hrtime()
+    rev_buf = reverse_string_via_stack(string_of_letters)
+    
+    let end = process.hrtime()
+    
+    let exe_time = end[1] - start[1]
 
-total_time = Math.round((end[1] - start[1]) / 1000)
+    exe_time_total += exe_time
+}
+
+average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 2: Reverse string via stack")
-console.log("Execution time: " + total_time + "us");
+console.log("Average execution time: " + average_exe_time + "us");
 console.log("Output: " + rev_buf + "\n")
 
 // Case 3: Reverse string via recursion
 
-start = process.hrtime()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_recursion(string_of_letters)
+for (let i = 0; i < 100; i++) {
+    let start = process.hrtime()
 
-end = process.hrtime()
+    rev_buf = reverse_string_via_recursion(string_of_letters)
+    
+    let end = process.hrtime()
+    
+    let exe_time = end[1] - start[1]
 
-total_time = Math.round((end[1] - start[1]) / 1000)
+    exe_time_total += exe_time
+}
+
+average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 3: Reverse string via recursion")
-console.log("Execution time: " + total_time + "us");
+console.log("Average execution time: " + average_exe_time + "us");
 console.log("Output: " + rev_buf + "\n")
 
 /* Sort Number List in Descending Order (Reverse Order) */
@@ -110,16 +135,25 @@ let list_of_nums = [
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
 ]
 
-start = process.hrtime()
+let rev_list_of_nums = []
+exe_time_total = 0
 
-let rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+for (let i = 0; i < 100; i++) {
+    let start = process.hrtime()
 
-end = process.hrtime()
+    rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+    
+    let end = process.hrtime()
+    
+    let exe_time = end[1] - start[1]
 
-total_time = Math.round((end[1] - start[1]) / 1000)
+    exe_time_total += exe_time
+}
+
+average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 4: Sort number list in descending order via loop")
-console.log("Execution time: " + total_time + "us");
+console.log("Average execution time: " + average_exe_time + "us");
 console.log("Output: ")
 console.log(rev_list_of_nums)
 console.log("")
@@ -128,14 +162,22 @@ console.log("")
 
 // Case 5: Reverse string via built-in functions
 
-start = process.hrtime()
+exe_time_total = 0
 
-rev_buf = reverse_string_via_built_in_functions(string_of_letters)
+for (let i = 0; i < 100; i++) {
+    let start = process.hrtime()
 
-end = process.hrtime()
+    rev_buf = reverse_string_via_built_in_functions(string_of_letters)
+    
+    let end = process.hrtime()
+    
+    let exe_time = end[1] - start[1]
 
-total_time = Math.round((end[1] - start[1]) / 1000)
+    exe_time_total += exe_time
+}
+
+average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 5: Reverse string via built-in functions")
-console.log("Execution time: " + total_time + "us");
+console.log("Average execution time: " + average_exe_time + "us");
 console.log("Output: " + rev_buf + "\n")

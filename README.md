@@ -17,31 +17,31 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Python</td>
-        <td style="text-align: right;">16us</td>
-        <td style="text-align: right;">13us</td>
-        <td style="text-align: right;">53us</td>
-        <td style="text-align: right;">266us</td>
+        <td style="text-align: right;">7us</td>
+        <td style="text-align: right;">10us</td>
+        <td style="text-align: right;">20us</td>
+        <td style="text-align: right;">6us</td>
     </tr>
     <tr>
         <td>Golang</td>
-        <td style="text-align: right;">5us</td>
         <td style="text-align: right;">6us</td>
-        <td style="text-align: right;">27us</td>
-        <td style="text-align: right;">4us</td>
+        <td style="text-align: right;">7us</td>
+        <td style="text-align: right;">8us</td>
+        <td style="text-align: right;">0us</td>
     </tr>
     <tr>
         <td>JavaScript</td>
-        <td style="text-align: right;">33us</td>
-        <td style="text-align: right;">48us</td>
-        <td style="text-align: right;">63us</td>
-        <td style="text-align: right;">224us</td>
+        <td style="text-align: right;">5us</td>
+        <td style="text-align: right;">11us</td>
+        <td style="text-align: right;">17us</td>
+        <td style="text-align: right;">5us</td>
     </tr>
     <tr>
         <td>Java</td>
-        <td style="text-align: right;">86us</td>
-        <td style="text-align: right;">2583us</td>
-        <td style="text-align: right;">5700us</td>
-        <td style="text-align: right;">111us</td>
+        <td style="text-align: right;">18us</td>
+        <td style="text-align: right;">44us</td>
+        <td style="text-align: right;">99us</td>
+        <td style="text-align: right;">2us</td>
     </tr>
 </table>
 
@@ -50,64 +50,66 @@ and sorts the lists in descending order (reverse order).
 #### Python
 
 Case 1: Reverse string via loop \
-Execution time: 16us
+Average execution time: 7us
 
 Case 2: Reverse string via stack \
-Execution time: 13us
+Average execution time: 10us
 
 Case 3: Reverse string via recursion \
-Execution time: 53us
+Average execution time: 20us
 
 Case 4: Sort number in descending order via loop \
-Execution time: 266us
+Average execution time: 6us
 
 Case 5: Reverse string via extended slice \
-Execution time: 2us
+Average execution time: 0us
 
 #### Golang
 
 Case 1: Reverse string via loop \
-Execution time: 5us
+Average execution time: 6us
 
 Case 2: Reverse string via stack \
-Execution time: 6us
+Average execution time: 7us
 
 Case 3: Reverse string via recursion \
-Execution time: 27us
+Average execution time: 8us
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 4us
+Average execution time: 0us
+Output: 
 
 Case 5: Reverse string via loop with rune \
-Execution time: 1us
+Average execution time: 1us
 
 #### JavaScript
 
 Case 1: Reverse string via loop \
-Execution time: 33us
+Average execution time: 5us
 
 Case 2: Reverse string via stack \
-Execution time: 48us
+Average execution time: 11us
 
 Case 3: Reverse string via recursion \
-Execution time: 63us
+Average execution time: 17us
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 224us
+Average execution time: 5us
 
 Case 5: Reverse string via built-in functions \
-Execution time: 43us
+Average execution time: 3us
 
 #### Java
 
 Case 1: Reverse string via loop \
-Execution time: 86us
+Average execution time: 18us
 
 Case 2: Reverse string via stack \
-Execution time: 2583us
+Average execution time: 44us
 
 Case 3: Reverse string via recursion \
-Execution time: 5700us
+Average execution time: 99us
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 111us
+Average execution time: 2us
+

@@ -61,44 +61,69 @@ func main() {
 
 	// Case 1: Reverse string via loop
 
-	start := time.Now().UnixMicro()
+	exe_time_total := 0
+	rev_buf := ""
 
-	rev_buf := reverse_string_via_loop(string_of_letters)
+	for i := 0; i < 100; i++ {
+		start := time.Now().UnixMicro()
 
-	end := time.Now().UnixMicro()
+		rev_buf = reverse_string_via_loop(string_of_letters)
 
-	exe_time := end - start
+		end := time.Now().UnixMicro()
+
+		exe_time := end - start
+
+		exe_time_total += int(exe_time)
+	}
+
+	average_exe_time := exe_time_total / 100
 
 	fmt.Println("Case 1: Reverse string via loop")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "us")
+	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 2: Reverse string via stack
 
-	start = time.Now().UnixMicro()
+	exe_time_total = 0
 
-	rev_buf = reverse_string_via_stack(string_of_letters)
+	for i := 0; i < 100; i++ {
+		start := time.Now().UnixMicro()
 
-	end = time.Now().UnixMicro()
+		rev_buf = reverse_string_via_stack(string_of_letters)
 
-	exe_time = end - start
+		end := time.Now().UnixMicro()
+
+		exe_time := end - start
+
+		exe_time_total += int(exe_time)
+	}
+
+	average_exe_time = exe_time_total / 100
 
 	fmt.Println("Case 2: Reverse string via stack")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "us")
+	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 3: Reverse string via recursion
 
-	start = time.Now().UnixMicro()
+	exe_time_total = 0
 
-	rev_buf = reverse_string_via_recursion(string_of_letters)
+	for i := 0; i < 100; i++ {
+		start := time.Now().UnixMicro()
 
-	end = time.Now().UnixMicro()
+		rev_buf = reverse_string_via_recursion(string_of_letters)
 
-	exe_time = end - start
+		end := time.Now().UnixMicro()
+
+		exe_time := end - start
+
+		exe_time_total += int(exe_time)
+	}
+
+	average_exe_time = exe_time_total / 100
 
 	fmt.Println("Case 3: Reverse string via recursion")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "us")
+	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	/* Sort Number List in Descending Order (Reverse Order) */
@@ -113,16 +138,26 @@ func main() {
 		41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
 	}
 
-	start = time.Now().UnixMicro()
+	var rev_list_of_nums []int
 
-	var rev_list_of_nums []int = sort_list_in_descending_order(list_of_nums)
+	exe_time_total = 0
 
-	end = time.Now().UnixMicro()
+	for i := 0; i < 100; i++ {
+		start := time.Now().UnixMicro()
 
-	exe_time = end - start
+		rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+
+		end := time.Now().UnixMicro()
+
+		exe_time := end - start
+
+		exe_time_total += int(exe_time)
+	}
+
+	average_exe_time = exe_time_total / 100
 
 	fmt.Println("Case 4: Sort number list in descending order via loop")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "us")
+	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
 	fmt.Println("Output: ")
 	fmt.Println(rev_list_of_nums)
 	fmt.Println()
@@ -131,15 +166,23 @@ func main() {
 
 	// Case 5: Reverse string via loop with rune
 
-	start = time.Now().UnixMicro()
+	exe_time_total = 0
 
-	rev_buf = reverse_string_via_rune(string_of_letters)
+	for i := 0; i < 100; i++ {
+		start := time.Now().UnixMicro()
 
-	end = time.Now().UnixMicro()
+		rev_buf = reverse_string_via_rune(string_of_letters)
 
-	exe_time = end - start
+		end := time.Now().UnixMicro()
+
+		exe_time := end - start
+
+		exe_time_total += int(exe_time)
+	}
+
+	average_exe_time = exe_time_total / 100
 
 	fmt.Println("Case 5: Reverse string via loop with rune")
-	fmt.Println("Execution time: " + fmt.Sprint(exe_time) + "us")
+	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
 	fmt.Println("Output: " + rev_buf + "\n")
 }
