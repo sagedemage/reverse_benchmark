@@ -38,10 +38,10 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Java</td>
-        <td style="text-align: right;">75250ns</td>
-        <td style="text-align: right;">1702044ns</td>
-        <td style="text-align: right;">3656871ns</td>
-        <td style="text-align: right;">82436ns</td>
+        <td style="text-align: right;">60123ns</td>
+        <td style="text-align: right;">688430ns</td>
+        <td style="text-align: right;">2821498ns</td>
+        <td style="text-align: right;">73755ns</td>
     </tr>
 </table>
 
@@ -101,13 +101,13 @@ Execution time: 38690ns
 #### Java
 
 Case 1: Reverse string via loop \
-Execution time: 75250ns
+Execution time: 60123ns
 
 Case 2: Reverse string via stack \
-Execution time: 1702044ns
+Execution time: 688430ns
 
 Case 3: Reverse string via recursion \
-Execution time: 3656871ns
+Execution time: 2821498ns
 
 Case 4: Sort number list in descending order via loop \
-Execution time: 82436ns
+Execution time: 73755ns
