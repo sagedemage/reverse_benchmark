@@ -38,7 +38,7 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Java</td>
-        <td style="text-align: right;">60896ns</td>
+        <td style="text-align: right;">60123ns</td>
         <td style="text-align: right;">688430ns</td>
         <td style="text-align: right;">2821498ns</td>
         <td style="text-align: right;">73755ns</td>
@@ -101,7 +101,7 @@ Execution time: 38690ns
 #### Java
 
 Case 1: Reverse string via loop \
-Execution time: 60896ns
+Execution time: 60123ns
 
 Case 2: Reverse string via stack \
 Execution time: 688430ns
