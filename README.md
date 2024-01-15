@@ -57,3 +57,16 @@ Execution time: 239263ns
 Case 5: Reverse string via built-in functions \
 Execution time: 38690ns
 
+### Java
+
+Case 1: Reverse string via loop \
+Execution time: 75250ns
+
+Case 2: Reverse string via stack \
+Execution time: 1702044ns
+
+Case 3: Reverse string via recursion \
+Execution time: 3656871ns
+
+Case 4: Sort number list in descending order via loop \
+Execution time: 82436ns
