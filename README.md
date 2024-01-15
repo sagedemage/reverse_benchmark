@@ -6,7 +6,48 @@ and sorts the lists in descending order (reverse order).
 
 ## Results
 
-### Python
+### Table
+<table>
+    <tr>
+        <th>Languages</th>
+        <th>Case 1: Reverse string via loop</th>
+        <th>Case 2: Reverse string via stack</th>
+        <th>Case 3: Reverse string via recursion</th>
+        <th>Case 4: Sort number in descending order via loop</th>
+    </tr>
+    <tr>
+        <td>Python</td>
+        <td style="text-align: right;">13909ns</td>
+        <td style="text-align: right;">17229ns</td>
+        <td style="text-align: right;">51521ns</td>
+        <td style="text-align: right;">290797ns</td>
+    </tr>
+    <tr>
+        <td>Golang</td>
+        <td style="text-align: right;">5038ns</td>
+        <td style="text-align: right;">5634ns</td>
+        <td style="text-align: right;">37886ns</td>
+        <td style="text-align: right;">3276ns</td>
+    </tr>
+    <tr>
+        <td>JavaScript</td>
+        <td style="text-align: right;">31650ns</td>
+        <td style="text-align: right;">56149ns</td>
+        <td style="text-align: right;">71800ns</td>
+        <td style="text-align: right;">239263ns</td>
+    </tr>
+    <tr>
+        <td>Java</td>
+        <td style="text-align: right;">75250ns</td>
+        <td style="text-align: right;">1702044ns</td>
+        <td style="text-align: right;">3656871ns</td>
+        <td style="text-align: right;">82436ns</td>
+    </tr>
+</table>
+
+### Stdout
+
+#### Python
 
 Case 1: Reverse string via loop \
 Execution time: 13909ns
@@ -23,7 +64,7 @@ Execution time: 290797ns
 Case 5: Reverse string via extended slice \
 Execution time: 1662ns
 
-### Golang
+#### Golang
 
 Case 1: Reverse string via loop \
 Execution time: 5038ns
@@ -40,7 +81,7 @@ Execution time: 3276ns
 Case 5: Reverse string via loop with rune \
 Execution time: 1212ns
 
-### JavaScript
+#### JavaScript
 
 Case 1: Reverse string via loop \
 Execution time: 31650ns
@@ -57,7 +98,7 @@ Execution time: 239263ns
 Case 5: Reverse string via built-in functions \
 Execution time: 38690ns
 
-### Java
+#### Java
 
 Case 1: Reverse string via loop \
 Execution time: 75250ns
