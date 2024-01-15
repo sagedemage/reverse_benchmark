@@ -120,6 +120,11 @@ public class Main {
     }
 
     public static int[] sort_list_in_descending_order(int[] num_list) {
+        /*
+        Time complexity: O(n)
+        Space complexity: O(n)
+        Auxiliary space: O(n)
+         */
         while (true) {
             int instances_of_out_of_order = 0;
             for (int i = 0; i < num_list.length-1; i++) {
