@@ -186,7 +186,6 @@ memory = tracemalloc.get_traced_memory()[0]
 tracemalloc.stop()
 
 average_exe_time = int(exe_time_total / 100)
-average_memory_usage = round((total_memory / 1024) / 100, 2)
 
 print("Case 4: Sort number in descending order via loop")
 print("Average execution time: " + str(average_exe_time) + "us")
