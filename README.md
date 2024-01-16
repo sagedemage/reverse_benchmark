@@ -31,17 +31,17 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Golang</td>
-        <td style="text-align: right;">6us</td>
         <td style="text-align: right;">7us</td>
-        <td style="text-align: right;">5us</td>
+        <td style="text-align: right;">7us</td>
+        <td style="text-align: right;">6us</td>
         <td style="text-align: right;">0us</td>
     </tr>
     <tr>
         <td></td>
-        <td style="text-align: right;">257bytes</td>
-        <td style="text-align: right;">265bytes</td>
-        <td style="text-align: right;">265bytes</td>
-        <td style="text-align: right;">172bytes</td>
+        <td style="text-align: right;">99bytes</td>
+        <td style="text-align: right;">100bytes</td>
+        <td style="text-align: right;">99bytes</td>
+        <td style="text-align: right;">0bytes</td>
     </tr>
     <tr>
         <td>JavaScript</td>
@@ -100,24 +100,24 @@ Average memory usage: 153bytes
 #### Golang
 
 Case 1: Reverse string via loop \
-Average execution time: 6us \
-Memory usage: 257bytes
+Average execution time: 7us \
+Memory usage: 99bytes
 
 Case 2: Reverse string via stack \
 Average execution time: 7us \
-Memory usage: 265bytes
+Memory usage: 100bytes
 
 Case 3: Reverse string via recursion \
-Average execution time: 5us \
-Memory usage: 265bytes
+Average execution time: 6us \
+Memory usage: 99bytes
 
 Case 4: Sort number list in descending order via loop \
 Average execution time: 0us \
-Memory usage: 172bytes
+Memory usage: 0bytes
 
 Case 5: Reverse string via loop with rune \
 Average execution time: 1us \
-Memory usage: 176bytes
+Memory usage: 2bytes
 
 #### JavaScript
 

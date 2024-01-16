@@ -63,7 +63,7 @@ func main() {
 	// Case 1: Reverse string via loop
 
 	exe_time_total := 0
-	var memory uint64
+	var used_memory, used_memory1, used_memory2 uint64
 	rev_buf := ""
 
 	for i := 0; i < 100; i++ {
@@ -80,19 +80,24 @@ func main() {
 
 	average_exe_time := exe_time_total / 100
 
-	var m runtime.MemStats
+	var m1 runtime.MemStats
+	var m2 runtime.MemStats
 
 	runtime.GC()
 
+	runtime.ReadMemStats(&m1)
+
 	rev_buf = reverse_string_via_loop(string_of_letters)
 
-	runtime.ReadMemStats(&m)
+	runtime.ReadMemStats(&m2)
 
-	memory = m.Mallocs - m.Frees
+	used_memory1 = m1.Mallocs - m1.Frees
+	used_memory2 = m2.Mallocs - m2.Frees
+	used_memory = used_memory2 - used_memory1
 
 	fmt.Println("Case 1: Reverse string via loop")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
-	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
+	fmt.Println("Memory usage: " + fmt.Sprint(used_memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 2: Reverse string via stack
@@ -115,15 +120,19 @@ func main() {
 
 	runtime.GC()
 
+	runtime.ReadMemStats(&m1)
+
 	rev_buf = reverse_string_via_stack(string_of_letters)
 
-	runtime.ReadMemStats(&m)
+	runtime.ReadMemStats(&m2)
 
-	memory = m.Mallocs - m.Frees
+	used_memory1 = m1.Mallocs - m1.Frees
+	used_memory2 = m2.Mallocs - m2.Frees
+	used_memory = used_memory2 - used_memory1
 
 	fmt.Println("Case 2: Reverse string via stack")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
-	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
+	fmt.Println("Memory usage: " + fmt.Sprint(used_memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 3: Reverse string via recursion
@@ -146,15 +155,19 @@ func main() {
 
 	runtime.GC()
 
+	runtime.ReadMemStats(&m1)
+
 	rev_buf = reverse_string_via_recursion(string_of_letters)
 
-	runtime.ReadMemStats(&m)
+	runtime.ReadMemStats(&m2)
 
-	memory = m.Mallocs - m.Frees
+	used_memory1 = m1.Mallocs - m1.Frees
+	used_memory2 = m2.Mallocs - m2.Frees
+	used_memory = used_memory2 - used_memory1
 
 	fmt.Println("Case 3: Reverse string via recursion")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
-	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
+	fmt.Println("Memory usage: " + fmt.Sprint(used_memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	/* Sort Number List in Descending Order (Reverse Order) */
@@ -189,15 +202,19 @@ func main() {
 
 	runtime.GC()
 
+	runtime.ReadMemStats(&m1)
+
 	rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
 
-	runtime.ReadMemStats(&m)
+	runtime.ReadMemStats(&m2)
 
-	memory = m.Mallocs - m.Frees
+	used_memory1 = m1.Mallocs - m1.Frees
+	used_memory2 = m2.Mallocs - m2.Frees
+	used_memory = used_memory2 - used_memory1
 
 	fmt.Println("Case 4: Sort number list in descending order via loop")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
-	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
+	fmt.Println("Memory usage: " + fmt.Sprint(used_memory) + "bytes")
 	fmt.Println("Output: ")
 	fmt.Println(rev_list_of_nums)
 	fmt.Println()
@@ -224,14 +241,18 @@ func main() {
 
 	runtime.GC()
 
+	runtime.ReadMemStats(&m1)
+
 	rev_buf = reverse_string_via_rune(string_of_letters)
 
-	runtime.ReadMemStats(&m)
+	runtime.ReadMemStats(&m2)
 
-	memory = m.Mallocs - m.Frees
+	used_memory1 = m1.Mallocs - m1.Frees
+	used_memory2 = m2.Mallocs - m2.Frees
+	used_memory = used_memory2 - used_memory1
 
 	fmt.Println("Case 5: Reverse string via loop with rune")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
-	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
+	fmt.Println("Memory usage: " + fmt.Sprint(used_memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 }
