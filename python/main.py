@@ -56,8 +56,6 @@ string_of_letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefg
 # Case 1: Reverse string via loop
 
 exe_time_total = 0
-rev_buf = ""
-memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -88,7 +86,6 @@ print("Output: " + rev_buf + "\n")
 # Case 2: Reverse string via stack
 
 exe_time_total = 0
-memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -119,7 +116,6 @@ print("Output: " + rev_buf + "\n")
 # Case 3: Reverse string via recursion
 
 exe_time_total = 0
-total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -131,8 +127,6 @@ for i in range(100):
     exe_time = end_t - start_t
 
     exe_time_total += exe_time.microseconds
-
-    total_memory += tracemalloc.get_traced_memory()[0]
 
 tracemalloc.start()
 
@@ -164,7 +158,6 @@ list_of_nums = [
 rev_list_of_nums = []
 
 exe_time_total = 0
-total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -199,7 +192,6 @@ print("")
 # Case 5: Reverse string via extended slice
 
 exe_time_total = 0
-total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
