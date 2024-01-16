@@ -73,10 +73,19 @@ for (let i = 0; i < 100; i++) {
     exe_time_total += exe_time
 }
 
+let used_mem1 = process.memoryUsage()
+
+rev_buf = reverse_string_via_loop(string_of_letters)
+
+let used_mem2 = process.memoryUsage()
+
+let used_mem = used_mem2.heapUsed - used_mem1.heapUsed
+
 let average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 1: Reverse string via loop")
 console.log("Average execution time: " + average_exe_time + "us");
+console.log("Memory usage: " + used_mem + "bytes")
 console.log("Output: " + rev_buf + "\n")
 
 // Case 2: Reverse string via stack
@@ -95,10 +104,19 @@ for (let i = 0; i < 100; i++) {
     exe_time_total += exe_time
 }
 
+used_mem1 = process.memoryUsage()
+
+rev_buf = reverse_string_via_stack(string_of_letters)
+
+used_mem2  = process.memoryUsage()
+
+used_mem = used_mem2.heapUsed - used_mem1.heapUsed
+
 average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 2: Reverse string via stack")
 console.log("Average execution time: " + average_exe_time + "us");
+console.log("Memory usage: " + used_mem + "bytes")
 console.log("Output: " + rev_buf + "\n")
 
 // Case 3: Reverse string via recursion
@@ -117,10 +135,19 @@ for (let i = 0; i < 100; i++) {
     exe_time_total += exe_time
 }
 
+used_mem1 = process.memoryUsage()
+
+rev_buf = reverse_string_via_recursion(string_of_letters)
+
+used_mem2  = process.memoryUsage()
+
+used_mem = used_mem2.heapUsed - used_mem1.heapUsed
+
 average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 3: Reverse string via recursion")
 console.log("Average execution time: " + average_exe_time + "us");
+console.log("Memory usage: " + used_mem + "bytes")
 console.log("Output: " + rev_buf + "\n")
 
 /* Sort Number List in Descending Order (Reverse Order) */
@@ -150,10 +177,19 @@ for (let i = 0; i < 100; i++) {
     exe_time_total += exe_time
 }
 
+used_mem1 = process.memoryUsage()
+
+rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+
+used_mem2  = process.memoryUsage()
+
+used_mem = used_mem2.heapUsed - used_mem1.heapUsed
+
 average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 4: Sort number list in descending order via loop")
 console.log("Average execution time: " + average_exe_time + "us");
+console.log("Memory usage: " + used_mem + "bytes")
 console.log("Output: ")
 console.log(rev_list_of_nums)
 console.log("")
@@ -176,8 +212,17 @@ for (let i = 0; i < 100; i++) {
     exe_time_total += exe_time
 }
 
+used_mem1 = process.memoryUsage()
+
+rev_buf = reverse_string_via_built_in_functions(string_of_letters)
+
+used_mem2  = process.memoryUsage()
+
+used_mem = used_mem2.heapUsed - used_mem1.heapUsed
+
 average_exe_time = Math.round(((exe_time_total / 1000) / 100))
 
 console.log("Case 5: Reverse string via built-in functions")
 console.log("Average execution time: " + average_exe_time + "us");
+console.log("Memory usage: " + used_mem + "bytes")
 console.log("Output: " + rev_buf + "\n")
