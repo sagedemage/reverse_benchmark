@@ -59,10 +59,17 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>Java</td>
-        <td style="text-align: right;">18us</td>
-        <td style="text-align: right;">44us</td>
-        <td style="text-align: right;">99us</td>
+        <td style="text-align: right;">17us</td>
+        <td style="text-align: right;">55us</td>
+        <td style="text-align: right;">107us</td>
         <td style="text-align: right;">2us</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;">8240008bytes</td>
+        <td style="text-align: right;">8268272bytes</td>
+        <td style="text-align: right;">8300944bytes</td>
+        <td style="text-align: right;">8184472bytes</td>
     </tr>
 </table>
 
@@ -137,14 +144,18 @@ Memory usage: 2072bytes
 #### Java
 
 Case 1: Reverse string via loop \
-Average execution time: 18us
+Average execution time: 17us \
+Memory usage: 8240008bytes
 
 Case 2: Reverse string via stack \
-Average execution time: 44us
+Average execution time: 55us \
+Memory usage: 8268272bytes
 
 Case 3: Reverse string via recursion \
-Average execution time: 99us
+Average execution time: 107us \
+Memory usage: 8300944bytes
 
 Case 4: Sort number list in descending order via loop \
-Average execution time: 2us
+Average execution time: 2us \
+Memory usage: 8184472bytes
 
