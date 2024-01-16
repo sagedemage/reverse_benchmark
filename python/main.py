@@ -1,4 +1,5 @@
 import datetime
+import tracemalloc
 from reverse_string_via_extended_slice import reverse_string_via_extended_slice
 from sort_list_in_descending_order import sort_list_in_descending_order
 
@@ -56,6 +57,7 @@ string_of_letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefg
 
 exe_time_total = 0
 rev_buf = ""
+memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -68,15 +70,25 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
+tracemalloc.start()
+
+rev_buf = reverse_string_via_loop(string_of_letters)
+
+memory = tracemalloc.get_traced_memory()[1]
+
+tracemalloc.stop()
+
 average_exe_time = int(exe_time_total / 100)
 
 print("Case 1: Reverse string via loop")
 print("Average execution time: " + str(average_exe_time) + "us")
+print("Memory usage: " + str(memory) + "bytes")
 print("Output: " + rev_buf + "\n")
 
 # Case 2: Reverse string via stack
 
 exe_time_total = 0
+memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -89,15 +101,25 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
+tracemalloc.start()
+
+rev_buf = reverse_string_via_stack(string_of_letters)
+
+memory = tracemalloc.get_traced_memory()[1]
+
+tracemalloc.stop()
+
 average_exe_time = int(exe_time_total / 100)
 
 print("Case 2: Reverse string via stack")
 print("Average execution time: " + str(average_exe_time) + "us")
+print("Memory usage: " + str(memory) + "bytes")
 print("Output: " + rev_buf + "\n")
 
 # Case 3: Reverse string via recursion
 
 exe_time_total = 0
+total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -110,10 +132,21 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
+    total_memory += tracemalloc.get_traced_memory()[1]
+
+tracemalloc.start()
+
+rev_buf = reverse_string_via_recursion(string_of_letters)
+
+memory = tracemalloc.get_traced_memory()[1]
+
+tracemalloc.stop()
+
 average_exe_time = int(exe_time_total / 100)
 
 print("Case 3: Reverse string via recursion")
 print("Average execution time: " + str(average_exe_time) + "us")
+print("Memory usage: " + str(memory) + "bytes")
 print("Output: " + rev_buf + "\n")
 
 """Sort Number List in Descending Order (Reverse Order)"""
@@ -131,6 +164,7 @@ list_of_nums = [
 rev_list_of_nums = []
 
 exe_time_total = 0
+total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -143,10 +177,20 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
+tracemalloc.start()
+
+rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+
+memory = tracemalloc.get_traced_memory()[1]
+
+tracemalloc.stop()
+
 average_exe_time = int(exe_time_total / 100)
+average_memory_usage = round((total_memory / 1024) / 100, 2)
 
 print("Case 4: Sort number in descending order via loop")
 print("Average execution time: " + str(average_exe_time) + "us")
+print("Memory usage: " + str(memory) + "bytes")
 print("Output: ")
 print(rev_list_of_nums)
 print("")
@@ -156,6 +200,7 @@ print("")
 # Case 5: Reverse string via extended slice
 
 exe_time_total = 0
+total_memory = 0
 
 for i in range(100):
     start_t = datetime.datetime.now()
@@ -168,8 +213,17 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
+tracemalloc.start()
+
+rev_buf = reverse_string_via_extended_slice(string_of_letters)
+
+memory = tracemalloc.get_traced_memory()[1]
+
+tracemalloc.stop()
+
 average_exe_time = int(exe_time_total / 100)
 
 print("Case 5: Reverse string via extended slice")
 print("Average execution time: " + str(average_exe_time) + "us")
+print("Average memory usage: " + str(memory) + "bytes")
 print("Output: " + rev_buf + "\n")
