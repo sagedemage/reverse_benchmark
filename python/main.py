@@ -74,7 +74,7 @@ tracemalloc.start()
 
 rev_buf = reverse_string_via_loop(string_of_letters)
 
-memory = tracemalloc.get_traced_memory()[1]
+memory = tracemalloc.get_traced_memory()[0]
 
 tracemalloc.stop()
 
@@ -105,7 +105,7 @@ tracemalloc.start()
 
 rev_buf = reverse_string_via_stack(string_of_letters)
 
-memory = tracemalloc.get_traced_memory()[1]
+memory = tracemalloc.get_traced_memory()[0]
 
 tracemalloc.stop()
 
@@ -132,13 +132,13 @@ for i in range(100):
 
     exe_time_total += exe_time.microseconds
 
-    total_memory += tracemalloc.get_traced_memory()[1]
+    total_memory += tracemalloc.get_traced_memory()[0]
 
 tracemalloc.start()
 
 rev_buf = reverse_string_via_recursion(string_of_letters)
 
-memory = tracemalloc.get_traced_memory()[1]
+memory = tracemalloc.get_traced_memory()[0]
 
 tracemalloc.stop()
 
@@ -181,7 +181,7 @@ tracemalloc.start()
 
 rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
 
-memory = tracemalloc.get_traced_memory()[1]
+memory = tracemalloc.get_traced_memory()[0]
 
 tracemalloc.stop()
 
@@ -217,7 +217,7 @@ tracemalloc.start()
 
 rev_buf = reverse_string_via_extended_slice(string_of_letters)
 
-memory = tracemalloc.get_traced_memory()[1]
+memory = tracemalloc.get_traced_memory()[0]
 
 tracemalloc.stop()
 

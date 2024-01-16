@@ -18,16 +18,16 @@ and sorts the lists in descending order (reverse order).
     <tr>
         <td>Python</td>
         <td style="text-align: right;">6us</td>
-        <td style="text-align: right;">12us</td>
-        <td style="text-align: right;">22us</td>
+        <td style="text-align: right;">10us</td>
+        <td style="text-align: right;">20us</td>
         <td style="text-align: right;">6us</td>
     </tr>
     <tr>
         <td></td>
-        <td style="text-align: right;">353bytes</td>
-        <td style="text-align: right;">1037bytes</td>
-        <td style="text-align: right;">10404bytes</td>
-        <td style="text-align: right;">96bytes</td>
+        <td style="text-align: right;">153bytes</td>
+        <td style="text-align: right;">153bytes</td>
+        <td style="text-align: right;">153bytes</td>
+        <td style="text-align: right;">0bytes</td>
     </tr>
     <tr>
         <td>Golang</td>
@@ -79,19 +79,19 @@ and sorts the lists in descending order (reverse order).
 
 Case 1: Reverse string via loop \
 Average execution time: 6us \
-Memory usage: 353bytes
+Memory usage: 153bytes
 
 Case 2: Reverse string via stack \
-Average execution time: 12us \
-Memory usage: 1037bytes
+Average execution time: 10us \
+Memory usage: 153bytes
 
 Case 3: Reverse string via recursion \
-Average execution time: 22us \
-Memory usage: 10404bytes
+Average execution time: 20us \
+Memory usage: 153bytes
 
 Case 4: Sort number in descending order via loop \
 Average execution time: 6us \
-Memory usage: 96bytes
+Memory usage: 0bytes
 
 Case 5: Reverse string via extended slice \
 Average execution time: 0us \
