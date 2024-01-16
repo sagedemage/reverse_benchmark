@@ -23,10 +23,19 @@ public class Main {
             exe_time_total += exe_time;
         }
 
+        Runtime rt = Runtime.getRuntime();
+
+        System.gc();
+
+        rev_buf = reverse_string_via_loop(string_of_letters);
+
+        long used_mem = rt.totalMemory() - rt.freeMemory();
+
         long average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 1: Reverse string via loop");
         System.out.println("Average execution time: " + average_exe_time + "us");
+        System.out.println("Memory usage: " + used_mem + "bytes");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 2: Reverse string via stack
@@ -42,10 +51,17 @@ public class Main {
             exe_time_total += exe_time;
         }
 
+        System.gc();
+
+        rev_buf = reverse_string_via_stack(string_of_letters);
+
+        used_mem = rt.totalMemory() - rt.freeMemory();
+
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 2: Reverse string via stack");
         System.out.println("Average execution time: " + average_exe_time + "us");
+        System.out.println("Memory usage: " + used_mem + "bytes");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 3: Reverse string via recursion
@@ -61,10 +77,17 @@ public class Main {
             exe_time_total += exe_time;
         }
 
+        System.gc();
+
+        rev_buf = reverse_string_via_recursion(string_of_letters);
+
+        used_mem = rt.totalMemory() - rt.freeMemory();
+
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 3: Reverse string via recursion");
         System.out.println("Average execution time: " + average_exe_time + "us");
+        System.out.println("Memory usage: " + used_mem + "bytes");
         System.out.println("Output: " + rev_buf + "\n");
 
         /* Sort Number List in Descending Order (Reverse Order) */
@@ -79,7 +102,7 @@ public class Main {
                 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
         };
 
-        int[] rev_list_of_nums = new int[50];
+        int[] rev_list_of_nums;
         exe_time_total = 0;
 
         for (int i = 0; i < 100; i++) {
@@ -91,10 +114,17 @@ public class Main {
             exe_time_total += exe_time;
         }
 
+        System.gc();
+
+        rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
+
+        used_mem = rt.totalMemory() - rt.freeMemory();
+
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 4: Sort number list in descending order via loop");
         System.out.println("Average execution time: " + average_exe_time + "us");
+        System.out.println("Memory usage: " + used_mem + "bytes");
         System.out.println("Output: ");
         System.out.println(Arrays.toString(rev_list_of_nums) + "\n");
     }
