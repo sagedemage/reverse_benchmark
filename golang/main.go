@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"strings"
 	"time"
 )
@@ -62,6 +63,7 @@ func main() {
 	// Case 1: Reverse string via loop
 
 	exe_time_total := 0
+	var memory uint64
 	rev_buf := ""
 
 	for i := 0; i < 100; i++ {
@@ -78,8 +80,19 @@ func main() {
 
 	average_exe_time := exe_time_total / 100
 
+	var m runtime.MemStats
+
+	runtime.GC()
+
+	rev_buf = reverse_string_via_loop(string_of_letters)
+
+	runtime.ReadMemStats(&m)
+
+	memory = m.Mallocs - m.Frees
+
 	fmt.Println("Case 1: Reverse string via loop")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
+	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 2: Reverse string via stack
@@ -100,8 +113,17 @@ func main() {
 
 	average_exe_time = exe_time_total / 100
 
+	runtime.GC()
+
+	rev_buf = reverse_string_via_stack(string_of_letters)
+
+	runtime.ReadMemStats(&m)
+
+	memory = m.Mallocs - m.Frees
+
 	fmt.Println("Case 2: Reverse string via stack")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
+	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	// Case 3: Reverse string via recursion
@@ -122,8 +144,17 @@ func main() {
 
 	average_exe_time = exe_time_total / 100
 
+	runtime.GC()
+
+	rev_buf = reverse_string_via_recursion(string_of_letters)
+
+	runtime.ReadMemStats(&m)
+
+	memory = m.Mallocs - m.Frees
+
 	fmt.Println("Case 3: Reverse string via recursion")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
+	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 
 	/* Sort Number List in Descending Order (Reverse Order) */
@@ -156,8 +187,17 @@ func main() {
 
 	average_exe_time = exe_time_total / 100
 
+	runtime.GC()
+
+	rev_list_of_nums = sort_list_in_descending_order(list_of_nums)
+
+	runtime.ReadMemStats(&m)
+
+	memory = m.Mallocs - m.Frees
+
 	fmt.Println("Case 4: Sort number list in descending order via loop")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
+	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
 	fmt.Println("Output: ")
 	fmt.Println(rev_list_of_nums)
 	fmt.Println()
@@ -182,7 +222,16 @@ func main() {
 
 	average_exe_time = exe_time_total / 100
 
+	runtime.GC()
+
+	rev_buf = reverse_string_via_rune(string_of_letters)
+
+	runtime.ReadMemStats(&m)
+
+	memory = m.Mallocs - m.Frees
+
 	fmt.Println("Case 5: Reverse string via loop with rune")
 	fmt.Println("Average execution time: " + fmt.Sprint(average_exe_time) + "us")
+	fmt.Println("Memory usage: " + fmt.Sprint(memory) + "bytes")
 	fmt.Println("Output: " + rev_buf + "\n")
 }
