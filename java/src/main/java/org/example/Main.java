@@ -27,9 +27,13 @@ public class Main {
 
         System.gc();
 
+        long used_mem1 = rt.totalMemory() - rt.freeMemory();
+
         rev_buf = reverse_string_via_loop(string_of_letters);
 
-        long used_mem = rt.totalMemory() - rt.freeMemory();
+        long used_mem2 = rt.totalMemory() - rt.freeMemory();
+
+        long used_mem = used_mem2 - used_mem1;
 
         long average_exe_time = (exe_time_total / 1000) / 100;
 
@@ -53,9 +57,13 @@ public class Main {
 
         System.gc();
 
+        used_mem1 = rt.totalMemory() - rt.freeMemory();
+
         rev_buf = reverse_string_via_stack(string_of_letters);
 
-        used_mem = rt.totalMemory() - rt.freeMemory();
+        used_mem2 = rt.totalMemory() - rt.freeMemory();
+
+        used_mem = used_mem2 - used_mem1;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
@@ -79,9 +87,13 @@ public class Main {
 
         System.gc();
 
+        used_mem1 = rt.totalMemory() - rt.freeMemory();
+
         rev_buf = reverse_string_via_recursion(string_of_letters);
 
-        used_mem = rt.totalMemory() - rt.freeMemory();
+        used_mem2 = rt.totalMemory() - rt.freeMemory();
+
+        used_mem = used_mem2 - used_mem1;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
@@ -116,9 +128,13 @@ public class Main {
 
         System.gc();
 
+        used_mem1 = rt.totalMemory() - rt.freeMemory();
+
         rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
 
-        used_mem = rt.totalMemory() - rt.freeMemory();
+        used_mem2 = rt.totalMemory() - rt.freeMemory();
+
+        used_mem = used_mem2 - used_mem1;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
