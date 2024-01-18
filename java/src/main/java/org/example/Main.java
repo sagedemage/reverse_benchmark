@@ -181,8 +181,6 @@ public class Main {
             list_of_chars[i] = list_of_chars_original.remove(list_of_chars_original.size()-1);
 
         }
-
-        //return temp_buf.toString();
         return String.copyValueOf(list_of_chars);
     }
 
