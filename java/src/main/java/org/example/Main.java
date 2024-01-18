@@ -1,7 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -152,13 +154,16 @@ public class Main {
         Auxiliary space: O(1)
         */
 
-        StringBuilder temp_buf = new StringBuilder();
+        char[] list_of_chars = new char[buf.length()];
 
-        for (int i = 0; i < buf.length(); i++) {
-            temp_buf.insert(0, buf.charAt(i));
+        int j = buf.length()-1;
+
+        for (int i = 0; i < list_of_chars.length; i++) {
+            list_of_chars[i] = buf.charAt(j);
+            j--;
         }
 
-        return temp_buf.toString();
+        return String.copyValueOf(list_of_chars);
     }
 
     public static String reverse_string_via_stack(String buf) {
@@ -168,15 +173,15 @@ public class Main {
         Auxiliary space: O(n)
         */
 
-        StringBuilder temp_buf = new StringBuilder();
+        ArrayList<Character> list_of_chars_original = buf.chars().mapToObj(e -> (char) e).collect(Collectors.toCollection(ArrayList::new));
 
-        List<Character> list_of_chars = buf.chars().mapToObj(e -> (char)e).toList();
+        char[] list_of_chars = new char[buf.length()];
 
-        for (int i = 0; i < list_of_chars.size(); i++) {
-            temp_buf.insert(0, buf.charAt(i));
+        for (int i = 0; i < list_of_chars.length; i++) {
+            list_of_chars[i] = list_of_chars_original.remove(list_of_chars_original.size()-1);
+
         }
-
-        return temp_buf.toString();
+        return String.copyValueOf(list_of_chars);
     }
 
     public static String reverse_string_via_recursion(String buf) {
