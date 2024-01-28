@@ -71,6 +71,20 @@ and sorts the lists in descending order (reverse order).
         <td style="text-align: right;">116528bytes</td>
         <td style="text-align: right;">0bytes</td>
     </tr>
+    <tr>
+        <td>C#</td>
+        <td style="text-align: right;">2us</td>
+        <td style="text-align: right;">9us</td>
+        <td style="text-align: right;">17us</td>
+        <td style="text-align: right;">1us</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;">776bytes</td>
+        <td style="text-align: right;">1144bytes</td>
+        <td style="text-align: right;">29280bytes</td>
+        <td style="text-align: right;">0bytes</td>
+    </tr>
 </table>
 
 ### Stdout
@@ -154,6 +168,24 @@ Memory usage: 116528bytes
 Case 3: Reverse string via recursion \
 Average execution time: 32us \
 Memory usage: 116528bytes
+
+Case 4: Sort number list in descending order via loop \
+Average execution time: 1us \
+Memory usage: 0bytes
+
+#### C#
+
+Case 1: Reverse string via loop \
+Average execution time: 2us \
+Memory usage: 776bytes
+
+Case 2: Reverse string via stack \
+Average execution time: 9us \
+Memory usage: 1144bytes
+
+Case 3: Reverse string via recursion \
+Average execution time: 17us \
+Memory usage: 29280bytes
 
 Case 4: Sort number list in descending order via loop \
 Average execution time: 1us \
