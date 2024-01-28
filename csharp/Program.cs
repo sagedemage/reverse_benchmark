@@ -137,8 +137,6 @@ class Program
 
         System.Text.StringBuilder temp_string = new System.Text.StringBuilder();
 
-        int j = buf.Length - 1;
-
         for (int i = buf.Length - 1; i > -1; i--)
         { 
             temp_string.Append(buf[i]);
