@@ -1,12 +1,14 @@
+# Python #
 __pycache__/
 .idea/
 
+# Java #
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### IntelliJ IDEA ###
+## IntelliJ IDEA ##
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -15,7 +17,7 @@ target/
 *.iml
 *.ipr
 
-### Eclipse ###
+## Eclipse ##
 .apt_generated
 .classpath
 .factorypath
@@ -24,7 +26,7 @@ target/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+## NetBeans ##
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -34,8 +36,47 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code #
 .vscode/
 
-### Mac OS ###
+# Mac OS #
 .DS_Store
+
+# C Sharp (.NET) #
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+## Visual Studio Code ##
+.vscode
+
+## Rider ##
+.idea
+
+## User-specific files ## 
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results ##
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+## Visual Studio 2015 ##
+.vs/
