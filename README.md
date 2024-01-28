@@ -73,9 +73,9 @@ and sorts the lists in descending order (reverse order).
     </tr>
     <tr>
         <td>C#</td>
-        <td style="text-align: right;">3us</td>
-        <td style="text-align: right;">10us</td>
-        <td style="text-align: right;">18us</td>
+        <td style="text-align: right;">2us</td>
+        <td style="text-align: right;">9us</td>
+        <td style="text-align: right;">17us</td>
         <td style="text-align: right;">1us</td>
     </tr>
     <tr>
@@ -180,11 +180,11 @@ Average execution time: 2us \
 Memory usage: 776bytes
 
 Case 2: Reverse string via stack \
-Average execution time: 10us \
+Average execution time: 9us \
 Memory usage: 1144bytes
 
 Case 3: Reverse string via recursion \
-Average execution time: 19us \
+Average execution time: 17us \
 Memory usage: 29280bytes
 
 Case 4: Sort number list in descending order via loop \
