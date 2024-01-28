@@ -196,8 +196,9 @@ public class Main {
         }
 
         String temp_buf = buf.substring(1);
+        String first_letter = String.valueOf(buf.charAt(0));
 
-        return reverse_string_via_recursion(temp_buf) + buf.charAt(0);
+        return reverse_string_via_recursion(temp_buf).concat(first_letter);
     }
 
     public static int[] sort_list_in_descending_order(int[] num_list) {

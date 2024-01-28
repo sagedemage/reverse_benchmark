@@ -60,8 +60,8 @@ and sorts the lists in descending order (reverse order).
     <tr>
         <td>Java</td>
         <td style="text-align: right;">3us</td>
-        <td style="text-align: right;">63us</td>
-        <td style="text-align: right;">107us</td>
+        <td style="text-align: right;">75us</td>
+        <td style="text-align: right;">30us</td>
         <td style="text-align: right;">1us</td>
     </tr>
     <tr>
@@ -148,11 +148,11 @@ Average execution time: 3us \
 Memory usage: 145856bytes
 
 Case 2: Reverse string via stack \
-Average execution time: 63us \
+Average execution time: 75us \
 Memory usage: 116536bytes
 
 Case 3: Reverse string via recursion \
-Average execution time: 107us \
+Average execution time: 30us \
 Memory usage: 116528bytes
 
 Case 4: Sort number list in descending order via loop \
