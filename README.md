@@ -67,7 +67,7 @@ and sorts the lists in descending order (reverse order).
     <tr>
         <td></td>
         <td style="text-align: right;">145656bytes</td>
-        <td style="text-align: right;">116536bytes</td>
+        <td style="text-align: right;">116528bytes</td>
         <td style="text-align: right;">116528bytes</td>
         <td style="text-align: right;">0bytes</td>
     </tr>
