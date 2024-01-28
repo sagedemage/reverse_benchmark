@@ -2,8 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -173,13 +171,16 @@ public class Main {
         Auxiliary space: O(n)
         */
 
-        ArrayList<Character> list_of_chars_original = buf.chars().mapToObj(e -> (char) e).collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<Character> list_of_chars_original = new ArrayList<Character>(buf.length());
+
+        for (int i = 0; i < buf.length(); i++) {
+            list_of_chars_original.add(buf.charAt(i));
+        }
 
         char[] list_of_chars = new char[buf.length()];
 
         for (int i = 0; i < list_of_chars.length; i++) {
             list_of_chars[i] = list_of_chars_original.remove(list_of_chars_original.size()-1);
-
         }
         return String.copyValueOf(list_of_chars);
     }
