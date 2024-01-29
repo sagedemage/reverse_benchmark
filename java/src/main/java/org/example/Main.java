@@ -208,21 +208,21 @@ public class Main {
         Space complexity: O(n)
         Auxiliary space: O(n)
          */
-        while (true) {
-            int instances_of_out_of_order = 0;
-            for (int i = 0; i < num_list.length-1; i++) {
-                if (num_list[i] < num_list[i+1]) {
-                    int small = num_list[i];
-                    int large = num_list[i+1];
+        for (int i = 0; i < num_list.length-1; i++) {
+            boolean instances_of_out_of_order = false;
+            for (int j = 0; j < num_list.length-1; j++) {
+                if (num_list[j] < num_list[j+1]) {
+                    int small = num_list[j];
+                    int large = num_list[j+1];
 
-                    num_list[i] = large;
-                    num_list[i+1] = small;
+                    num_list[j] = large;
+                    num_list[j+1] = small;
 
-                    instances_of_out_of_order += 1;
+                    instances_of_out_of_order = true;
                 }
             }
 
-            if (instances_of_out_of_order == 0) {
+            if (!instances_of_out_of_order) {
                 break;
             }
         }

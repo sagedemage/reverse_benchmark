@@ -5,20 +5,20 @@ function sort_list_in_descending_order(num_list) {
     Auxiliary space: O(n)
     */
 
-    while (true) {
-        let instances_of_out_of_order = 0
-        for (let i = 0; i < num_list.length; i++) {
-            if (num_list[i] < num_list[i + 1]) {
-                let small = num_list[i]
-                let large = num_list[i + 1]
+    for (let i = 0; i < num_list.length; i++) {
+        let instances_of_out_of_order = false
+        for (let j = 0; j < num_list.length; j++) {
+            if (num_list[j] < num_list[j + 1]) {
+                let small = num_list[j]
+                let large = num_list[j + 1]
 
-                num_list[i] = large
-                num_list[i + 1] = small
+                num_list[j] = large
+                num_list[j + 1] = small
 
-                instances_of_out_of_order += 1
+                instances_of_out_of_order = true
             }
         }
-        if (instances_of_out_of_order == 0) {
+        if (!instances_of_out_of_order) {
             break
         }
     }
