@@ -26,17 +26,17 @@ class Program
         }
 
         GC.Collect();
-        long used_mem1 = GC.GetTotalAllocatedBytes(true);
+        double used_mem1 = GC.GetTotalAllocatedBytes(true);
         rev_buf = reverse_string_via_loop(string_of_letters);
-        long used_mem2 = GC.GetTotalAllocatedBytes(true);
+        double used_mem2 = GC.GetTotalAllocatedBytes(true);
 
-        long used_mem = used_mem2 - used_mem1;
+        double used_mem = Math.Round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         long average_exe_time = exe_time_total / 100;
 
         Console.WriteLine("Case 1: Reverse string via loop");
         Console.WriteLine("Average execution time: " + average_exe_time + "us");
-        Console.WriteLine("Memory usage: " + used_mem + "bytes");
+        Console.WriteLine("Memory usage: " + used_mem + "KiB");
         Console.WriteLine("Output: " + rev_buf + "\n");
 
         // Case 2: Reverse string via stack
@@ -57,13 +57,13 @@ class Program
         rev_buf = reverse_string_via_stack(string_of_letters);
         used_mem2 = GC.GetTotalAllocatedBytes(true);
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = Math.Round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = exe_time_total / 100;
 
         Console.WriteLine("Case 2: Reverse string via stack");
         Console.WriteLine("Average execution time: " + average_exe_time + "us");
-        Console.WriteLine("Memory usage: " + used_mem + "bytes");
+        Console.WriteLine("Memory usage: " + used_mem + "KiB");
         Console.WriteLine("Output: " + rev_buf + "\n");
 
         // Case 3: Reverse string via recursion
@@ -84,13 +84,13 @@ class Program
         rev_buf = reverse_string_via_recursion(string_of_letters);
         used_mem2 = GC.GetTotalAllocatedBytes(true);
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = Math.Round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = exe_time_total / 100;
 
         Console.WriteLine("Case 3: Reverse string via recursion");
         Console.WriteLine("Average execution time: " + average_exe_time + "us");
-        Console.WriteLine("Memory usage: " + used_mem + "bytes");
+        Console.WriteLine("Memory usage: " + used_mem + "KiB");
         Console.WriteLine("Output: " + rev_buf + "\n");
 
         // Case 4: Sort number list in descending order via loop
@@ -120,13 +120,13 @@ class Program
         rev_list_of_nums = sort_list_in_descending_order(list_of_nums);
         used_mem2 = GC.GetTotalAllocatedBytes(true);
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = Math.Round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = exe_time_total / 100;
 
         Console.WriteLine("Case 4: Sort number list in descending order via loop");
         Console.WriteLine("Average execution time: " + average_exe_time + "us");
-        Console.WriteLine("Memory usage: " + used_mem + "bytes");
+        Console.WriteLine("Memory usage: " + used_mem + "KiB");
         Console.WriteLine("Output: ");
         Console.WriteLine(convert_list_to_string(rev_list_of_nums));
     }

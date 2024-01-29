@@ -27,19 +27,19 @@ public class Main {
 
         System.gc();
 
-        long used_mem1 = rt.totalMemory() - rt.freeMemory();
+        double used_mem1 = rt.totalMemory() - rt.freeMemory();
 
         rev_buf = reverse_string_via_loop(string_of_letters);
 
-        long used_mem2 = rt.totalMemory() - rt.freeMemory();
+        double used_mem2 = rt.totalMemory() - rt.freeMemory();
 
-        long used_mem = used_mem2 - used_mem1;
+        double used_mem = (double) Math.round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         long average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 1: Reverse string via loop");
         System.out.println("Average execution time: " + average_exe_time + "us");
-        System.out.println("Memory usage: " + used_mem + "bytes");
+        System.out.println("Memory usage: " + used_mem + "KiB");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 2: Reverse string via stack
@@ -63,13 +63,13 @@ public class Main {
 
         used_mem2 = rt.totalMemory() - rt.freeMemory();
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = (double) Math.round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 2: Reverse string via stack");
         System.out.println("Average execution time: " + average_exe_time + "us");
-        System.out.println("Memory usage: " + used_mem + "bytes");
+        System.out.println("Memory usage: " + used_mem + "KiB");
         System.out.println("Output: " + rev_buf + "\n");
 
         // Case 3: Reverse string via recursion
@@ -93,13 +93,13 @@ public class Main {
 
         used_mem2 = rt.totalMemory() - rt.freeMemory();
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = (double) Math.round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 3: Reverse string via recursion");
         System.out.println("Average execution time: " + average_exe_time + "us");
-        System.out.println("Memory usage: " + used_mem + "bytes");
+        System.out.println("Memory usage: " + used_mem + "KiB");
         System.out.println("Output: " + rev_buf + "\n");
 
         /* Sort Number List in Descending Order (Reverse Order) */
@@ -134,13 +134,13 @@ public class Main {
 
         used_mem2 = rt.totalMemory() - rt.freeMemory();
 
-        used_mem = used_mem2 - used_mem1;
+        used_mem = (double) Math.round((used_mem2 - used_mem1) / 1024 * 1000) / 1000;
 
         average_exe_time = (exe_time_total / 1000) / 100;
 
         System.out.println("Case 4: Sort number list in descending order via loop");
         System.out.println("Average execution time: " + average_exe_time + "us");
-        System.out.println("Memory usage: " + used_mem + "bytes");
+        System.out.println("Memory usage: " + used_mem + "KiB");
         System.out.println("Output: ");
         System.out.println(Arrays.toString(rev_list_of_nums) + "\n");
     }
